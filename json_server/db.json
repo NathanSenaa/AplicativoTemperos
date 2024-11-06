@@ -1,0 +1,6 @@
+{
+    "temperos": [
+      { "id": 1, "nome": "Colorau", "preco": 4.0, "estoque": 5 },
+      { "id": 2, "nome": "Açafrão", "preco": 15.0, "estoque": 0 }
+    ]
+  }
