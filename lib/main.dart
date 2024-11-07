@@ -10,6 +10,8 @@ void main() {
 }
 
 class TemperosApp extends StatelessWidget {
+  const TemperosApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,11 +21,11 @@ class TemperosApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       routes: {
-        '/': (context) => WelcomeScreen(),
-        '/login': (context) => LoginScreen(),
-        '/cadastro': (context) => CadastroScreen(),
-        '/catalogo': (context) => CatalogoScreen(),
-        '/detalhes': (context) => DetalhesTemperoScreen(tempero: {
+        '/': (context) => const WelcomeScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/cadastro': (context) => const CadastroScreen(),
+        '/catalogo': (context) => const CatalogoScreen(),
+        '/detalhes': (context) => const DetalhesTemperoScreen(tempero: {
           'nome': 'Nome do Tempero',
           'preco': 0.0,
           'imagem': 'assets/default.jpg',

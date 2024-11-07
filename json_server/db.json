@@ -1,6 +1,25 @@
 {
-    "temperos": [
-      { "id": 1, "nome": "Colorau", "preco": 4.0, "estoque": 5 },
-      { "id": 2, "nome": "Açafrão", "preco": 15.0, "estoque": 0 }
-    ]
-  }
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Especiarias",
+      "temperos": [1, 2] 
+    }
+  ],
+  "temperos": [
+    {
+      "id": 1,
+      "nome": "Colorau",
+      "preco": 4.0,
+      "estoque": 5,
+      "categoriaId": 1
+    },
+    {
+      "id": 2,
+      "nome": "Açafrão",
+      "preco": 15.0,
+      "estoque": 0,
+      "categoriaId": 1
+    }
+  ]
+}

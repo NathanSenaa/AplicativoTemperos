@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CarrinhoScreen extends StatefulWidget {
   final List<Map<String, dynamic>> produtosNoCarrinho;
 
-  CarrinhoScreen({required this.produtosNoCarrinho});
+  const CarrinhoScreen({super.key, required this.produtosNoCarrinho});
 
   @override
   _CarrinhoScreenState createState() => _CarrinhoScreenState();
@@ -38,15 +38,15 @@ class _CarrinhoScreenState extends State<CarrinhoScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Pagamento Aprovado'),
-        content: Text('Retire seu produto na loja Sena Condimentos'),
+        title: const Text('Pagamento Aprovado'),
+        content: const Text('Retire seu produto na loja Sena Condimentos'),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.pop(context); // Fecha o diálogo
               Navigator.pop(context); // Retorna à tela anterior
             },
-            child: Text('OK'),
+            child: const Text('OK'),
           ),
         ],
       ),
@@ -57,11 +57,11 @@ class _CarrinhoScreenState extends State<CarrinhoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carrinho de Compras'),
+        title: const Text('Carrinho de Compras'),
         backgroundColor: Colors.green[800],
       ),
       body: widget.produtosNoCarrinho.isEmpty
-          ? Center(
+          ? const Center(
               child: Text('Seu carrinho está vazio.'),
             )
           : Column(
@@ -75,7 +75,7 @@ class _CarrinhoScreenState extends State<CarrinhoScreen> {
                         title: Text(produto['nome']),
                         subtitle: Text('R\$ ${produto['preco'].toStringAsFixed(2)}'),
                         trailing: IconButton(
-                          icon: Icon(Icons.remove_circle, color: Colors.red),
+                          icon: const Icon(Icons.remove_circle, color: Colors.red),
                           onPressed: () => _removerProduto(index),
                         ),
                       );
@@ -86,19 +86,19 @@ class _CarrinhoScreenState extends State<CarrinhoScreen> {
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     'Total: R\$ ${valorTotal.toStringAsFixed(2)}',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ElevatedButton(
                     onPressed: _finalizarCompra,
-                    child: Text('Ir para o Pagamento'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green[800], // Corrigido aqui
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                      textStyle: TextStyle(fontSize: 18),
+                      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                      textStyle: const TextStyle(fontSize: 18),
                     ),
+                    child: Text('Ir para o Pagamento'),
                   ),
                 ),
               ],

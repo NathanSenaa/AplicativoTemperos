@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AdicionarTemperoScreen extends StatefulWidget {
   final Function(Map<String, dynamic>) onAdicionarTempero;
 
-  AdicionarTemperoScreen({required this.onAdicionarTempero});
+  const AdicionarTemperoScreen({super.key, required this.onAdicionarTempero});
 
   @override
   _AdicionarTemperoScreenState createState() => _AdicionarTemperoScreenState();
@@ -31,7 +31,7 @@ class _AdicionarTemperoScreenState extends State<AdicionarTemperoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Adicionar Novo Tempero'),
+        title: const Text('Adicionar Novo Tempero'),
         backgroundColor: Colors.green[800],
       ),
       body: Padding(
@@ -40,31 +40,31 @@ class _AdicionarTemperoScreenState extends State<AdicionarTemperoScreen> {
           children: [
             TextField(
               controller: _nomeController,
-              decoration: InputDecoration(labelText: 'Nome do Tempero'),
+              decoration: const InputDecoration(labelText: 'Nome do Tempero'),
             ),
             TextField(
               controller: _precoController,
-              decoration: InputDecoration(labelText: 'Preço'),
+              decoration: const InputDecoration(labelText: 'Preço'),
               keyboardType: TextInputType.number,
             ),
             TextField(
               controller: _descricaoController,
-              decoration: InputDecoration(labelText: 'Descrição'),
+              decoration: const InputDecoration(labelText: 'Descrição'),
             ),
             TextField(
               controller: _estoqueController,
-              decoration: InputDecoration(labelText: 'Estoque'),
+              decoration: const InputDecoration(labelText: 'Estoque'),
               keyboardType: TextInputType.number,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _salvarNovoTempero,
-              child: Text('Adicionar'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green[800],
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                textStyle: TextStyle(fontSize: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                textStyle: const TextStyle(fontSize: 18),
               ),
+              child: Text('Adicionar'),
             ),
           ],
         ),

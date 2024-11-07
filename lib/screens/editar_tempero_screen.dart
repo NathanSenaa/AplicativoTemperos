@@ -4,7 +4,7 @@ class EditarTemperoScreen extends StatefulWidget {
   final Map<String, dynamic> tempero;
   final Function(Map<String, dynamic>) onSave;
 
-  EditarTemperoScreen({required this.tempero, required this.onSave});
+  const EditarTemperoScreen({super.key, required this.tempero, required this.onSave});
 
   @override
   _EditarTemperoScreenState createState() => _EditarTemperoScreenState();
@@ -41,7 +41,7 @@ class _EditarTemperoScreenState extends State<EditarTemperoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Editar Tempero'),
+        title: const Text('Editar Tempero'),
         backgroundColor: Colors.green[800],
       ),
       body: Padding(
@@ -50,31 +50,31 @@ class _EditarTemperoScreenState extends State<EditarTemperoScreen> {
           children: [
             TextField(
               controller: _nomeController,
-              decoration: InputDecoration(labelText: 'Nome'),
+              decoration: const InputDecoration(labelText: 'Nome'),
             ),
             TextField(
               controller: _precoController,
-              decoration: InputDecoration(labelText: 'Preço'),
+              decoration: const InputDecoration(labelText: 'Preço'),
               keyboardType: TextInputType.number,
             ),
             TextField(
               controller: _descricaoController,
-              decoration: InputDecoration(labelText: 'Descrição'),
+              decoration: const InputDecoration(labelText: 'Descrição'),
             ),
             TextField(
               controller: _estoqueController,
-              decoration: InputDecoration(labelText: 'Estoque'),
+              decoration: const InputDecoration(labelText: 'Estoque'),
               keyboardType: TextInputType.number,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _salvarAlteracoes,
-              child: Text('Salvar'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green[800],
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                textStyle: TextStyle(fontSize: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                textStyle: const TextStyle(fontSize: 18),
               ),
+              child: Text('Salvar'),
             ),
           ],
         ),

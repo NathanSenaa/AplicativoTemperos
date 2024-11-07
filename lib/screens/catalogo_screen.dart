@@ -83,7 +83,7 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
         backgroundColor: Colors.green[800],
         actions: [
           IconButton(
-            icon: Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.shopping_cart),
             onPressed: () {
               Navigator.push(
                 context,
@@ -159,8 +159,8 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
             ),
           );
         },
-        child: Icon(Icons.add),
         backgroundColor: Colors.green[800],
+        child: Icon(Icons.add),
       ),
     );
   }

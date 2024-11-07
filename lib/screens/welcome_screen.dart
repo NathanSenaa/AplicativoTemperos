@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   textStyle: const TextStyle(fontSize: 18),
                 ),
-                child: Text('Entrar no Catálogo'),
+                child: const Text('Entrar no Catálogo'),
               ),
             ],
           ),
